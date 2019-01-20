@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <title>{% if page.layout == 'details' %}
+  {% capture page_title %}{{ page.politician }} landing page review - politica11y.com{% endcapture %}
+  {{ page_title }}
+{% else %}
+  politica11y.com Home Page
+{% endif %}</title>
+	<link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+{% include header.html %}
+
+{{ content }}
+
+{% include footer.html %}
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+---
+layout: page
+---
+<main>
+<h1>All Reviews</h1>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.politician }}</a>
+    </li>
+  {% endfor %}
+</ul>
+</main>

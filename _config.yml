@@ -1,0 +1,4 @@
+plugins:
+- jekyll-contentblocks
+
+permalink: /reviews/:title/

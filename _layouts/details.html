@@ -1,0 +1,31 @@
+---
+layout: page
+---
+<main>
+<h1>Details Page for {{ page.politician }}</h1>
+<p>Evaluated: {{ page.date | date: "%B %d, %Y" }}</p>
+
+{% ifhascontent ainspector or aXe or tenon or wave %}
+<h2>Automated Issues</h2>{% endifhascontent %}
+<dl>
+{% ifhascontent ainspector %}<dt>AInspector WCAG</dt><dd>{% contentblock ainspector %}</dd>{% endifhascontent %}
+{% ifhascontent axe %}<dt>aXe</dt><dd>{% contentblock axe %}</dd>{% endifhascontent %}
+{% ifhascontent tenon %}<dt>Tenon.io:</dt><dd>{% contentblock tenon %}</dd>{% endifhascontent %}
+{% ifhascontent wave %}<dt>WAVE</dt><dd>{% contentblock wave %}</dd>{% endifhascontent %}
+</dl>
+
+{% ifhascontent pagetitle or structure or headings or keyboard or movingflashingblinking or forms or textalternative or multimediaalternatives or contrast or resizetext %}
+<h2>Manual Issues</h2>{% endifhascontent %}
+<dl>
+  {% ifhascontent pagetitle %}<dt>Page Title:</dt><dd>{% contentblock pagetitle %}</dd>{% endifhascontent %}
+  {% ifhascontent structure %}<dt>Page Structure:</dt><dd>{% contentblock structure %}</dd>{% endifhascontent %}
+  {% ifhascontent headings %}<dt>Headings:</dt><dd>{% contentblock headings %}</dd>{% endifhascontent %}
+  {% ifhascontent keyboard %}<dt>Keyboard:</dt><dd>{% contentblock keyboard %}</dd>{% endifhascontent %}
+  {% ifhascontent movingflashingblinking %}<dt>Moving, Flashing, Blinking Content:</dt><dd>{% contentblock movingflashingblinking %}</dd>{% endifhascontent %}
+  {% ifhascontent forms %}<dt>Forms:</dt><dd>{% contentblock forms %}</dd>{% endifhascontent %}
+  {% ifhascontent textalternative %}<dt>Text Alternatives:</dt><dd>{% contentblock textalternative %}</dd>{% endifhascontent %}
+  {% ifhascontent multimediaalternatives %}<dt>Multimedia Alternatives:</dt><dd>{% contentblock multimediaalternatives %}</dd>{% endifhascontent %}
+  {% ifhascontent contrast %}<dt>Color Contrast:</dt><dd>{% contentblock contrast %}</dd>{% endifhascontent %}
+  {% ifhascontent resizetext %}<dt>Resize Text:</dt><dd>{% contentblock resizetext %}</dd>{% endifhascontent %}
+</dl>
+</main>

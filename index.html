@@ -1,0 +1,12 @@
+---
+layout: page
+---
+<main>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.politician }}</a>
+    </li>
+  {% endfor %}
+</ul>
+</main>
