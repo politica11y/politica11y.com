@@ -1,0 +1,8 @@
+  <dl>
+      <dt>Total Issues:</dt><dd>{{ 0 | plus: page.numberAinspectorIssues | plus: page.numberAxeIssues | plus: page.numberTenonIssues | plus: page.numberWaveIssues | plus: page.numberManualIssues }}</dd>
+      {% if page.numberAinspectorIssues %}<dt>AInspector WCAG Issues:</dt><dd>{{ page.numberAinspectorIssues }}</dd>{% endif %}
+      {% if page.numberAxeIssues %}<dt>Axe Issues:</dt><dd>{{ page.numberAxeIssues }}</dd>{% endif %}
+      {% if page.numberTenonIssues %}<dt>Tenon Issues: <a href="https://tenon.io/testNow.php?url={{ page.politician-site }}">View report on Tenon.io</a></dt><dd>{{ page.numberTenonIssues }}</dd>{% endif %}
+      {% if page.numberWaveIssues %}<dt>WAVE Issues: <a href="http://wave.webaim.org/report#/{{ page.politician-site }}">View report on wave.webaim.org</a></dt><dd>{{ page.numberWaveIssues }}</dd>{% endif %}
+      {% if page.numberManualIssues %}<dt>Manual Issues:</dt><dd>{{ page.numberManualIssues }}</dd>{% endif %}
+  </dl>
